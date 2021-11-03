@@ -1,0 +1,8 @@
+# cat=call_to_actions/file; type=string; label= Call to actions template path
+site.fluidtemplate.call_to_actions.templateRootPath = EXT:call_to_actions/Resources/Private/Templates/
+
+# cat=call_to_actions/file; type=string; label= Call to actions partial path
+site.fluidtemplate.call_to_actions.partialRootPath = EXT:call_to_actions/Resources/Private/Partials/
+
+# cat=call_to_actions/file; type=string; label= Call to actions layout path
+site.fluidtemplate.call_to_actions.layoutRootPath = EXT:call_to_actions/Resources/Private/Layouts/

@@ -1,0 +1,25 @@
+{
+    "name": "liquidlight/call-to-actions",
+    "description": "",
+    "type": "typo3-cms-extension",
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "Mike Street",
+            "email": "mike@liquidlight.co.uk"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "LiquidLight\\CallToActions\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "call_to_actions"
+        }
+    }
+}

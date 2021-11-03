@@ -1,0 +1,65 @@
+tt_content.call_to_actions = FLUIDTEMPLATE
+tt_content.call_to_actions {
+	templateName = CallToActions
+
+	classes {
+		type {
+			0 {
+				title = Simple
+				value = simple
+			}
+			1 {
+				title = Featured
+				value = featured
+			}
+		}
+
+		theme {
+			0 {
+				title = Light
+				value = light
+			}
+			1 {
+				title = Dark
+				value = dark
+			}
+		}
+	}
+
+	templateRootPaths {
+		0 = EXT:call_to_actions/Resources/Private/Templates/
+		10 = {$site.fluidtemplate.call_to_actions.templateRootPath}
+	}
+	partialRootPaths {
+		0 = EXT:call_to_actions/Resources/Private/Partials/
+		10 = {$site.fluidtemplate.call_to_actions.partialRootPath}
+	}
+	layoutRootPaths {
+		0 = EXT:call_to_actions/Resources/Private/Layouts/
+		10 = {$site.fluidtemplate.call_to_actions.layoutRootPath}
+	}
+
+
+	dataProcessing.100 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+	dataProcessing.100 {
+		if.isTrue.field = records
+
+		table = tx_calltoactions_domain_model_calltoactions
+		uidInList.data = records
+		pidInList = root,-1
+		recursive = 9999
+
+		# The target variable to be handed to the ContentObject again, can
+		# be used in Fluid e.g. to iterate over the objects. defaults to
+		# "records" when not defined
+		# + stdWrap
+		as = records
+
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = image
+			}
+		}
+	}
+}

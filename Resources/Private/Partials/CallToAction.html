@@ -1,0 +1,9 @@
+<div class="record {cta.theme} {cta.type}">
+	<f:if condition="{cta.image}">
+		<f:for each="{files}" as="image">
+			<f:render partial="Image" arguments="{image: image}" />
+		</f:for>
+	</f:if>
+
+	<f:render partial="Details" arguments="{cta: cta}" />
+</div>

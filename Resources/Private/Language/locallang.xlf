@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns:t3="http://typo3.org/schemas/xliff" version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2021-05-21T15:04:23Z" product-name="promos">
+		<header/>
+		<body>
+			<!-- Model: Promos -->
+			<trans-unit id="call_to_actions" xml:space="preserve">
+				<source>Call to Actions</source>
+			</trans-unit>
+			<trans-unit id="call_to_action" xml:space="preserve">
+				<source>Call to Action</source>
+			</trans-unit>
+			<trans-unit id="wizard.title" xml:space="preserve">
+				<source>Call to Actions</source>
+			</trans-unit>
+			<trans-unit id="wizard.description" xml:space="preserve">
+				<source>Add call to actions to the page</source>
+			</trans-unit>
+
+			<trans-unit id="label" xml:space="preserve">
+				<source>Label</source>
+			</trans-unit>
+			<trans-unit id="label.description" xml:space="preserve">
+				<source>Used to identify the CTA in the CMS. Please be as descriptive as you can (not used on the front-end).</source>
+			</trans-unit>
+			<trans-unit id="tx_call_to_action_layout" xml:space="preserve">
+				<source>Layout &amp; Style</source>
+			</trans-unit>
+			<trans-unit id="type" xml:space="preserve">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="type.simple" xml:space="preserve">
+				<source>Simple</source>
+			</trans-unit>
+			<trans-unit id="type.featured" xml:space="preserve">
+				<source>Featured</source>
+			</trans-unit>
+			<trans-unit id="theme" xml:space="preserve">
+				<source>Theme</source>
+			</trans-unit>
+			<trans-unit id="theme.light" xml:space="preserve">
+				<source>Light</source>
+			</trans-unit>
+			<trans-unit id="theme.dark" xml:space="preserve">
+				<source>Dark</source>
+			</trans-unit>
+			<trans-unit id="tx_call_to_action_content" xml:space="preserve">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="title" xml:space="preserve">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="content" xml:space="preserve">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_call_to_action_ct_action" xml:space="preserve">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="url" xml:space="preserve">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="button" xml:space="preserve">
+				<source>Button text</source>
+			</trans-unit>
+			<trans-unit id="image" xml:space="preserve">
+				<source>Image</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

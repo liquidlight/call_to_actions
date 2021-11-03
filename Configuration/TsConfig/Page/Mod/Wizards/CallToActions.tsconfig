@@ -1,0 +1,17 @@
+mod.wizards {
+	newContentElement.wizardItems {
+		plugins {
+			elements {
+				call_to_actions {
+					iconIdentifier = liquidlight_call_to_actions
+					title = LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:wizard.title
+					description = LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:wizard.description
+					tt_content_defValues {
+						CType = call_to_actions
+					}
+				}
+			}
+			show := addToList(call_to_actions)
+		}
+	}
+}

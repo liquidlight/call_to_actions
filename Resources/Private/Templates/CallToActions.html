@@ -1,0 +1,12 @@
+<html
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	data-namespace-typo3-fluid="true"
+>
+	<div class="callToActions list">
+		<div class="records">
+			<f:for each="{records}" as="cta">
+				<f:render partial="CallToAction" arguments="{cta: cta.data, files: cta.files}" />
+			</f:for>
+		</div>
+	</div>
+</html>
