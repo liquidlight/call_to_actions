@@ -118,9 +118,8 @@ return [
 						'type' => 'select',
 						'renderType' => 'selectSingle',
 						'items' => [
-							['LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:type.simple', 'simple'],
-							['LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:type.featured', 'featured'],
 						],
+						'itemsProcFunc' => \LiquidLight\CallToActions\Backend\CallToActionItemsProcFunc::class . '->getTypeClasses'
 					],
 				],
 				'theme' => [
@@ -130,9 +129,8 @@ return [
 						'type' => 'select',
 						'renderType' => 'selectSingle',
 						'items' => [
-							['LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:theme.light', 'light'],
-							['LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:theme.dark', 'dark'],
 						],
+						'itemsProcFunc' => \LiquidLight\CallToActions\Backend\CallToActionItemsProcFunc::class . '->getThemeClasses'
 					],
 				],
 

@@ -3,6 +3,6 @@
 # To Do
 
 - Write readme
-  - CConfiguration of templates
+  - Configuration of templates
   - Configuration of theme & types
-- Allow types & themes to be dynamic
+- Create proper TYPO documentation
