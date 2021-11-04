@@ -2,6 +2,12 @@
     "name": "liquidlight/call-to-actions",
     "description": "",
     "type": "typo3-cms-extension",
+    "license": "GPL-2.0+",
+    "keywords": [
+        "TYPO3 CMS",
+        "CTAs",
+        "Promos"
+    ],
     "require": {
         "typo3/cms-core": "^9.5"
     },
