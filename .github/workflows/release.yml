@@ -1,4 +1,4 @@
-name: TERUpload
+name: release
 
 on:
   push:
