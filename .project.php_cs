@@ -1,5 +1,15 @@
 <?php
 
+$finder = PhpCsFixer\Finder::create()
+	->exclude('vendor')
+	->ignoreDotFiles(true)
+	->ignoreUnreadableDirs()
+	->ignoreVCSIgnored(true)
+
+	->in(__DIR__)
+	;
+
+
 $config = new PhpCsFixer\Config();
 return $config->setRules([
 		'@PSR12' => true,
@@ -36,4 +46,5 @@ return $config->setRules([
 		'trailing_comma_in_multiline' => true,
 	])
 	->setIndent('	')
+	->setFinder($finder)
 	;
