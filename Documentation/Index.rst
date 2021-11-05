@@ -1,10 +1,21 @@
 .. include:: /Includes.rst.txt
 
+.. _start:
+
 ========
 Call to Actions
 ========
 
-Introduction
-============
+:Version:
+   |release|
 
-Shared Call to Action repository and plugin, to allow display of your CTAs
+:Language:
+   en
+
+:Authors:
+   Liquid Light, Mike Street
+
+:Email:
+   info@liquidlight.co.uk
+
+{extension.description}

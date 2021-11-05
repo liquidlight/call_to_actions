@@ -8,8 +8,17 @@
 .. ==================================================
 .. DEFINE SOME TEXTROLES
 .. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. role:: aspect (emphasis)
+.. role:: html(code)
+.. role:: js(code)
+.. role:: php(code)
+.. role:: sep (strong)
+.. role:: sql(code)
+.. role:: typoscript(code)
+.. role:: yaml(code)
+
+.. role:: ts(typoscript)
+   :class: typoscript
+
+.. default-role:: code
+.. highlight:: php
