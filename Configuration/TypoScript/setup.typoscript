@@ -42,17 +42,14 @@ tt_content.call_to_actions {
 
 	dataProcessing.100 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
 	dataProcessing.100 {
-		if.isTrue.field = records
+		// if.isTrue.field = records
 
 		table = tx_calltoactions_domain_model_calltoactions
-		uidInList.data = records
+		uidInList.data = field:records
+
 		pidInList = root,-1
 		recursive = 9999
 
-		# The target variable to be handed to the ContentObject again, can
-		# be used in Fluid e.g. to iterate over the objects. defaults to
-		# "records" when not defined
-		# + stdWrap
 		as = records
 
 		dataProcessing {
