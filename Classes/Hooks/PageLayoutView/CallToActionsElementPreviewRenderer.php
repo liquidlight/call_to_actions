@@ -11,15 +11,19 @@
 
 namespace LiquidLight\CallToActions\Hooks\PageLayoutView;
 
+use LiquidLight\CallToActions\Userfunc\Tca;
+
+use TYPO3\CMS\Backend\View\PageLayoutViewDrawItemHookInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Service\FlexFormService;
+use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 
 /**
  * Contains a preview rendering for the page module of CType="text"
  * @internal this is a concrete TYPO3 hook implementation and solely used for EXT:frontend and not part of TYPO3's Core API.
  */
-class CallToActionsElementPreviewRenderer implements \TYPO3\CMS\Backend\View\PageLayoutViewDrawItemHookInterface
+class CallToActionsElementPreviewRenderer implements PageLayoutViewDrawItemHookInterface
 {
 	/**
 	 * TYPO3 Content Hook
@@ -37,59 +41,84 @@ class CallToActionsElementPreviewRenderer implements \TYPO3\CMS\Backend\View\Pag
 		&$itemContent,
 		array &$row
 	) {
-		// Is this a catalog plugin?
-		if ($this->isCTAPlugin($row)) {
-			// Prevent default rendering
-			$content = $this->generatePreview($parentObject, $row);
+		// Is this a call_to_Actions plugin?
+		if ($row['CType'] === 'call_to_actions') {
+			// Generate the list of CTAs
+			$content = $this->generatePreview($row);
 
-			if ($content) {
+			// If we have some CTAs selected
+			if ((bool)$content) {
+				// Prevent the default rendering
 				$drawItem = false;
-				$headerContent = '<strong>Promo</strong><br>';
+
+				// Re-add the header at the top
+				$content = sprintf(
+					'<strong>%s</strong><br>%s',
+					$parentObject->CType_labels[$row['CType']],
+					$content
+				);
+
+				// Append our build preview, linked to the edit
 				$itemContent = $parentObject->linkEditContent($content, $row);
 			}
 		}
 	}
 
 	/**
-	 * Are we dealing with a catalog plugin?
+	 * generatePreview
 	 *
-	 * @param array $row
-	 * @return bool
-	 * @access protected
+	 * Generates a list of records selected on the Call To Action
+	 *
+	 * @param  array $row Record row of tt_content
+	 * @return string
 	 */
-	protected function isCTAPlugin($row)
+	protected function generatePreview(array $row):string
 	{
-		return $row['CType'] === 'list' && $row['list_type'] === 'promos_pi';
-	}
+		// Create a placeholder content
 
-	protected function generatePreview($parentObject, $row)
-	{
-		$content = false;
-
-		$flexFormData = GeneralUtility::makeInstance(FlexFormService::class)
-			->convertFlexFormContentToArray($row['pi_flexform'])
+		// Get the CTAs associated with this tt_content element
+		$content = '';
+		$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+			->getQueryBuilderForTable('tx_calltoactions_domain_model_calltoactions')
+		;
+		$records = $queryBuilder
+			->select('uid', 'label', 'type', 'theme')
+			->from('tx_calltoactions_domain_model_calltoactions')
+			->where(
+				$queryBuilder->expr()->in(
+					'uid',
+					$queryBuilder->createNamedParameter(
+						GeneralUtility::intExplode(',', $row['records']),
+						Connection::PARAM_INT_ARRAY
+					)
+				)
+			)
+			->execute()
+			->fetchAll()
 		;
 
-		if (is_array($flexFormData)) {
-			$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
-				->getQueryBuilderForTable('tx_promos')
-			;
-			$expr = $queryBuilder->expr();
-
-			$promo = $queryBuilder
-				->select('uid', 'label')
-				->from('tx_promos')
-				->where(
-					$queryBuilder->expr()->in('uid', $queryBuilder->createNamedParameter($flexFormData['promos']))
-				)
-				->execute()
-				->fetch()
-			;
-
-			if ($promo) {
-				$content = $promo['label'];
-			}
+		// Check if we have some
+		if(!count($records)) {
+			return $content;
 		}
+
+		// Use the existing TCA label maker
+		$tcaHelper = GeneralUtility::makeInstance(Tca::class);
+
+		// Create a list of selected records
+		$content .= '<ul style="padding: 0.2em 0 0 1.5em">';
+
+		foreach($records as $record) {
+			$parameters = [
+				'row' => $record,
+				'title' => $record['label'], // Set a default
+			];
+
+			$tcaHelper->getCallToActionLabel($parameters);
+			$content .='<li>' . htmlspecialchars($parameters['title']) . '</li>';
+		}
+
+		$content .= '</ul>';
 
 		// Return the preview content
 		return $content;
