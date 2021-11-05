@@ -37,5 +37,14 @@
         "typo3/cms": {
             "extension-key": "call_to_actions"
         }
+    },
+    "scripts": {
+        "prepare-release": [
+            "@extension-create-libs",
+            "rm -rf .github",
+            "rm .gitignore",
+            "rm docker-compose.yml",
+            "rm .project.php_cs"
+        ]
     }
 }
