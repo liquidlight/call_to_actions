@@ -50,8 +50,8 @@ return [
 					[
 						'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
 						-1,
-						'flags-multiple'
-						]
+						'flags-multiple',
+						],
 					],
 					'default' => 0,
 				],
@@ -94,8 +94,8 @@ return [
 						[
 							0 => '',
 							1 => '',
-							'invertStateDisplay' => true
-							]
+							'invertStateDisplay' => true,
+							],
 						],
 					],
 				],
@@ -119,7 +119,7 @@ return [
 						'renderType' => 'selectSingle',
 						'items' => [
 						],
-						'itemsProcFunc' => \LiquidLight\CallToActions\Backend\CallToActionItemsProcFunc::class . '->getTypeClasses'
+						'itemsProcFunc' => \LiquidLight\CallToActions\Backend\CallToActionItemsProcFunc::class . '->getTypeClasses',
 					],
 				],
 				'theme' => [
@@ -130,7 +130,7 @@ return [
 						'renderType' => 'selectSingle',
 						'items' => [
 						],
-						'itemsProcFunc' => \LiquidLight\CallToActions\Backend\CallToActionItemsProcFunc::class . '->getThemeClasses'
+						'itemsProcFunc' => \LiquidLight\CallToActions\Backend\CallToActionItemsProcFunc::class . '->getThemeClasses',
 					],
 				],
 

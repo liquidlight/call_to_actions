@@ -72,7 +72,7 @@ class CallToActionsElementPreviewRenderer implements PageLayoutViewDrawItemHookI
 	 * @param  array $row Record row of tt_content
 	 * @return string
 	 */
-	protected function generatePreview(array $row):string
+	protected function generatePreview(array $row): string
 	{
 		// Create a placeholder content
 
@@ -98,7 +98,7 @@ class CallToActionsElementPreviewRenderer implements PageLayoutViewDrawItemHookI
 		;
 
 		// Check if we have some
-		if(!count($records)) {
+		if (!count($records)) {
 			return $content;
 		}
 
@@ -108,7 +108,7 @@ class CallToActionsElementPreviewRenderer implements PageLayoutViewDrawItemHookI
 		// Create a list of selected records
 		$content .= '<ul style="padding: 0.2em 0 0 1.5em">';
 
-		foreach($records as $record) {
+		foreach ($records as $record) {
 			$parameters = [
 				'row' => $record,
 				'title' => $record['label'], // Set a default
