@@ -1,6 +1,6 @@
 ---
 name: Task
-about:
+about: General task/todo
 title: ''
 labels: ''
 assignees: ''

@@ -1,8 +1,8 @@
 ---
-name: Bug report
-about:
+name: Bug
+about: Report a bug with the repository
 title: 'Bug: '
-labels: 'bug'
+labels: bug
 assignees: ''
 
 ---

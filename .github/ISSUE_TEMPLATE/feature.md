@@ -1,8 +1,8 @@
 ---
 name: Feature
-about:
+about: Plan and describe a new feature
 title: ''
-labels: 'enhancement'
+labels: enhancement
 assignees: ''
 
 ---
