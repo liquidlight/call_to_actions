@@ -4,32 +4,10 @@ _This readme is **very much** in draft and needs to be written properly
 
 # To Do
 
-- Write readme
-  - Configuration of templates
-  - Configuration of theme & types
 - Create proper TYPO documentation
 - Make the plugin appear in the wizard in version 10
+- Add new icon
 
-
-## Installation
-
-```
-composer req liquidlight/call-to-actions
-```
-
-## Usage
-
-1. Install extension
-2. Decide where CTAs are going to live
-3. Add a new call to action
-  - Labels are only used internally
-  - Theme and Type is used for CSS styling, however you could use fluid conditionals to change the display & layout
-  - Buttons are only shown if link text & url are filled in
-  - Image is rendered at the top (but can be changed with a template)
-4. Go to the page where you want to display the CTA
-5. Create a new Call to Actions plugin
-6. Use the records field to navigate to the directory containing the CTAs and add the one(s) you wish to display
-7. Save, close and view
 
 ## Customisation
 

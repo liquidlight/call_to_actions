@@ -23,7 +23,8 @@
     ],
     "support": {
         "issues": "https://github.com/liquidlight/call_to_actions/issues",
-        "source": "https://github.com/liquidlight/call_to_actions"
+        "source": "https://github.com/liquidlight/call_to_actions",
+        "docs": "https://docs.typo3.org/p/liquidlight/call-to-actions/master/en-us/"
     },
     "require": {
         "typo3/cms-core": "^9.5 || ^10.4"
