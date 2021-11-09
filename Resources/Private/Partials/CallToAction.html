@@ -1,5 +1,5 @@
 <div class="record {cta.theme} {cta.type}">
-	<f:if condition="{cta.image}">
+	<f:if condition="{files}">
 		<f:for each="{files}" as="image">
 			<f:render partial="Image" arguments="{image: image}" />
 		</f:for>
