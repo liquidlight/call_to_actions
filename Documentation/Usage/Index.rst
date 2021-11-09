@@ -16,44 +16,42 @@ TL;DR
 5. Create a new content element, under "Plugins" select "Call to Actions"
 6. In the records field, select the CTA(s) you wish to display
 
-Instructions
+Steps
 ============
 
-Create new CTA
---------------
+.. rst-class:: bignums-xxl
 
-Once installed, it is best to create a sysfolder to house your Call to Actions, however this isn't a requirement and they can live anywhere on the site.
+#. Create new CTA
 
-Navigate to **List view** and create a new content element
+   Once installed, it is best to create a sysfolder to house your Call to Actions, however this isn't a requirement and they can live anywhere on the site.
 
-.. figure:: ../Images/CreateNewRecord.jpg
-   :alt: Create new CTA
+   Navigate to **List view** and create a new content element
 
-Enter CTA details
------------------
+   .. figure:: ../Images/CreateNewRecord.jpg
+      :alt: Create new CTA
 
-Fill in the fields required, some extra details
+#. Enter CTA details
 
-- The label field is only used internally, for identifying in list views and when selecting
-- Theme and Type is used for CSS styling, however you could use fluid conditionals to change the display & layout - these can be customised
-- Buttons/links are only shown if link text **&** url are filled in
-- The image is rendered at the top of the CTA (but can be changed by customising the template)
+   Fill in the fields required, some extra details
 
-.. figure:: ../Images/NewPromoRecord.jpg
-   :alt: Enter CTA details
+   - The label field is only used internally, for identifying in list views and when selecting
+   - Theme and Type is used for CSS styling, however you could use fluid conditionals to change the display & layout - these can be customised
+   - Buttons/links are only shown if link text **&** url are filled in
+   - The image is rendered at the top of the CTA (but can be changed by customising the template)
 
-Create the Content Element
---------------------------
+   .. figure:: ../Images/NewPromoRecord.jpg
+      :alt: Enter CTA details
 
-Navigate the the page you wish to show the CTA on and create a new content element. Under the "Plugins" tab you should be able to add a "Call to Actions" element
+#. Create the Content Element
 
-.. figure:: ../Images/CreateNewContentElement.jpg
-   :alt: Create the Content Elements
+   Navigate the the page you wish to show the CTA on and create a new content element. Under the "Plugins" tab you should be able to add a "Call to Actions" element
 
-Select the Records
-------------------
+   .. figure:: ../Images/CreateNewContentElement.jpg
+      :alt: Create the Content Elements
 
-Using the Items (Records), select the records you want to show
+#. Select the Records
 
-.. figure:: ../Images/SelectRecords.jpg
-   :alt: Select the Records
+   Using the Items (Records), select the records you want to show
+
+   .. figure:: ../Images/SelectRecords.jpg
+      :alt: Select the Records
