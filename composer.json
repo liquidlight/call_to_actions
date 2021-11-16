@@ -3,7 +3,7 @@
     "description": "Shared Call to Action repository and plugin, to allow display of your CTAs",
     "type": "typo3-cms-extension",
     "license": "GPL-2.0+",
-    "homepage": "https://github.com/liquidlight/call_to_actions",
+    "homepage": "https://github.com/liquidlight/typo3-call-to-actions",
     "readme": "./README.md",
     "keywords": [
         "TYPO3 CMS",
@@ -22,12 +22,12 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/liquidlight/call_to_actions/issues",
-        "source": "https://github.com/liquidlight/call_to_actions",
-        "docs": "https://docs.typo3.org/p/liquidlight/call-to-actions/master/en-us/"
+        "docs": "https://docs.typo3.org/p/liquidlight/call-to-actions/master/en-us/",
+        "issues": "https://github.com/liquidlight/typo3-call-to-actions/issues",
+        "source": "https://github.com/liquidlight/typo3-call-to-actions"
     },
     "require": {
-        "typo3/cms-core": "^9.5 || ^10.4"
+        "typo3/cms-core": "^9.5 || ^10.4 || ^11.5"
     },
     "autoload": {
         "psr-4": {
@@ -44,7 +44,6 @@
             "@extension-create-libs",
             "rm -rf .github",
             "rm .gitignore",
-            "rm docker-compose.yml",
             "rm .project.php_cs"
         ]
     }
