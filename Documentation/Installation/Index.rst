@@ -10,6 +10,6 @@ Call to actions can be installed via composer or downloaded from the `TYPO3 Exte
 
 .. code-block:: bash
 
-   composer req liquidlight/call-to-actions
+   composer req liquidlight/typo3-call-to-actions
 
 Make sure the extension is enabled in the CMS -> Extensions -> Call to Actions
