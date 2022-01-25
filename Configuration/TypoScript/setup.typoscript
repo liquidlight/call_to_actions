@@ -47,7 +47,7 @@ tt_content.call_to_actions {
 		table = tx_calltoactions_domain_model_calltoactions
 		uidInList.data = field:records
 
-		pidInList = root,-1
+		pidInList = 0
 		recursive = 9999
 
 		as = records
