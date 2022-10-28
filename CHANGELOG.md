@@ -1,3 +1,11 @@
+# 1.0.2
+
+**28th October 2022**
+
+#### Bug
+
+- Update tabs to use core language files
+
 # 1.0.1
 
 **25th Janurary 2022**
