@@ -1,12 +1,14 @@
 # 1.0.1
-> 25th Janurary 2022
+
+**25th Janurary 2022**
 
 ## Bug
 
 Set the dataProcessing pidInList value to 0
 
 # 1.0.0
-> 17th November 2021
+
+**17th November 2021**
 
 ## Release
 
