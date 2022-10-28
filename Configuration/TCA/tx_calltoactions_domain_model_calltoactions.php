@@ -38,7 +38,7 @@ return [
 		'maxSingleDBListItems' => 100,
 	],
 	'columns' => [
-		
+
 		'sys_language_uid' => [
 			'exclude' => true,
 			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
@@ -99,7 +99,7 @@ return [
 				],
 			],
 		],
-		
+
 		// General
 		'label' => [
 			'label' => 'LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:label',
@@ -110,7 +110,7 @@ return [
 				'eval' => 'required,trim',
 			],
 		],
-		
+
 		'type' => [
 			'l10n_mode' => 'exclude',
 			'label' => 'LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:type',
@@ -131,7 +131,7 @@ return [
 				'itemsProcFunc' => \LiquidLight\CallToActions\Backend\CallToActionItemsProcFunc::class . '->getThemeClasses',
 			],
 		],
-		
+
 		'title' => [
 			'label' => 'LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:title',
 			'config' => [
@@ -173,7 +173,7 @@ return [
 				'eval' => 'trim',
 			],
 		],
-		
+
 		'image' => [
 			'l10n_mode' => 'exclude',
 			'label' => 'LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:image',
@@ -183,7 +183,7 @@ return [
 				],
 				'maxitems' => 1,
 				'size' => 1,
-				
+
 				'foreign_types' => [
 					\TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
 						'showitem' => '
@@ -193,9 +193,9 @@ return [
 				],
 			], $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']),
 		],
-		
+
 	],
-	
+
 	'palettes' => [
 		'tx_call_to_action_layout' => [
 			'label' => 'LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:tx_call_to_action_layout',
@@ -210,7 +210,7 @@ return [
 			'showitem' => 'button, url',
 		],
 	],
-	
+
 	'types' => [
 		0 => [
 			'showitem' => '
