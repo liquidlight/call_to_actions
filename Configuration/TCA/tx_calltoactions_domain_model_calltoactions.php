@@ -1,16 +1,18 @@
 <?php
 
+use LiquidLight\CallToActions\Userfunc\Tca;
+use LiquidLight\CallToActions\Backend\CallToActionItemsProcFunc;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Resource\File;
 return [
 	'ctrl' => [
 		'title' => 'LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:call_to_action',
 		'label' => 'label',
-		'label_userFunc' => \LiquidLight\CallToActions\Userfunc\Tca::class . '->getCallToActionLabel',
+		'label_userFunc' => Tca::class . '->getCallToActionLabel',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
-		'dividers2tabs' => true,
 		'versioningWS' => true,
-		'versioning_followPages' => true,
 		'origUid' => 't3_origuid',
 		'languageField' => 'sys_language_uid',
 		'transOrigPointerField' => 'l10n_parent',
@@ -42,23 +44,10 @@ return [
 		'sys_language_uid' => [
 			'exclude' => true,
 			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
-			'config' => [
-				'type' => 'select',
-				'renderType' => 'selectSingle',
-				'special' => 'languages',
-				'items' => [
-					[
-						'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
-						-1,
-						'flags-multiple',
-					],
-				],
-				'default' => 0,
-			],
+			'config' => ['type' => 'language'],
 		],
 		'l10n_parent' => [
 			'displayCond' => 'FIELD:sys_language_uid:>:0',
-			'exclude' => true,
 			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
 			'config' => [
 				'type' => 'select',
@@ -118,7 +107,7 @@ return [
 				'type' => 'select',
 				'renderType' => 'selectSingle',
 				'items' => [],
-				'itemsProcFunc' => \LiquidLight\CallToActions\Backend\CallToActionItemsProcFunc::class . '->getTypeClasses',
+				'itemsProcFunc' => CallToActionItemsProcFunc::class . '->getTypeClasses',
 			],
 		],
 		'theme' => [
@@ -128,7 +117,7 @@ return [
 				'type' => 'select',
 				'renderType' => 'selectSingle',
 				'items' => [],
-				'itemsProcFunc' => \LiquidLight\CallToActions\Backend\CallToActionItemsProcFunc::class . '->getThemeClasses',
+				'itemsProcFunc' => CallToActionItemsProcFunc::class . '->getThemeClasses',
 			],
 		],
 
@@ -158,11 +147,6 @@ return [
 				'max' => 255,
 				'checkbox' => '',
 				'eval' => 'trim',
-				'wizards' => [
-					'link' => [
-						'JSopenParams' => 'height=600,width=800,status=0,menubar=0,scrollbars=1',
-					],
-				],
 			],
 		],
 		'button' => [
@@ -177,20 +161,20 @@ return [
 		'image' => [
 			'l10n_mode' => 'exclude',
 			'label' => 'LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:image',
-			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('image', [
+			'config' => ExtensionManagementUtility::getFileFieldTCAConfig('image', [
 				'appearance' => [
 					'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
 				],
 				'maxitems' => 1,
 				'size' => 1,
 
-				'foreign_types' => [
-					\TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+				'overrideChildTca' => ['types' => [
+					File::FILETYPE_IMAGE => [
 						'showitem' => '
 						alternative,crop,
 						--palette--;;filePalette',
 					],
-				],
+				]],
 			], $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']),
 		],
 
