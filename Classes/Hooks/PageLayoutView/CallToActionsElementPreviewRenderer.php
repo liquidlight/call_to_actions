@@ -11,6 +11,7 @@
 
 namespace LiquidLight\CallToActions\Hooks\PageLayoutView;
 
+use TYPO3\CMS\Backend\View\PageLayoutView;
 use LiquidLight\CallToActions\Userfunc\Tca;
 
 use TYPO3\CMS\Backend\View\PageLayoutViewDrawItemHookInterface;
@@ -35,7 +36,7 @@ class CallToActionsElementPreviewRenderer implements PageLayoutViewDrawItemHookI
 	 * @param array $row Record row of tt_content
 	 */
 	public function preProcess(
-		\TYPO3\CMS\Backend\View\PageLayoutView &$parentObject,
+		PageLayoutView &$parentObject,
 		&$drawItem,
 		&$headerContent,
 		&$itemContent,

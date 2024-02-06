@@ -1,9 +1,10 @@
 <?php
 
-defined('TYPO3_MODE') or die();
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+defined('TYPO3') or die();
 call_user_func(function () {
 	// Adds the content element to the "Type" dropdown
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+	ExtensionManagementUtility::addTcaSelectItem(
 		'tt_content',
 		'CType',
 		[
