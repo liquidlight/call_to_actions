@@ -115,7 +115,7 @@ class CallToActionsElementPreviewRenderer implements PageLayoutViewDrawItemHookI
 			];
 
 			$tcaHelper->getCallToActionLabel($parameters);
-			$content .='<li>' . htmlspecialchars($parameters['title']) . '</li>';
+			$content .= '<li>' . htmlspecialchars($parameters['title']) . '</li>';
 		}
 
 		$content .= '</ul>';
