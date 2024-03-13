@@ -1,3 +1,12 @@
+# 2.0.1
+
+**13th March 2024**
+
+#### Icons
+
+- Update extension icon
+
+
 # 2.0.0
 
 **13th March 2024**
