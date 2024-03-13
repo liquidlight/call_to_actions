@@ -4,6 +4,7 @@ use LiquidLight\CallToActions\Userfunc\Tca;
 use LiquidLight\CallToActions\Backend\CallToActionItemsProcFunc;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Resource\File;
+
 return [
 	'ctrl' => [
 		'title' => 'LLL:EXT:call_to_actions/Resources/Private/Language/locallang.xlf:call_to_action',
