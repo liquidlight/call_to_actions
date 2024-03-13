@@ -1,3 +1,11 @@
+# 2.0.0
+
+**13th March 2024**
+
+#### Dependencies
+
+- Drop support for TYPO3 9.5 and TYPO3 10.4
+
 # 1.1.0
 
 **13th March 2024**
