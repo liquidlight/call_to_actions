@@ -1,3 +1,11 @@
+# 1.1.0
+
+**13th March 2024**
+
+#### Feature
+
+- Add more common tabs (e.g. appearance & language) to the TCA
+
 # 1.0.2
 
 **28th October 2022**
